@@ -5,7 +5,7 @@
     		<div class="" id="loginModal">
               <div class="modal-header">
                
-                <h3>Registration Page</h3>
+                <h3>Registration and Login Page</h3>
               </div>
               <div class="modal-body">
                 <div class="well">
@@ -15,7 +15,7 @@
                       <form class="form-horizontal" action="./db_insert.php" method="POST">
                         <fieldset>
                           <div id="legend">
-                            <legend class="">Please fill out all information</legend>
+                            <legend class="">Register</legend>
                           </div>    
                           <div class="control-group">
                             <!-- Username -->
@@ -34,7 +34,7 @@
                           </div>
 
                           <div class="control-group">
-                            <!-- Username -->
+                            <!-- email -->
                             <label class="control-label"  for="username">Email</label>
                             <div class="controls">
                               <input required  type="email" id="email" name="email" placeholder="" class="input-xlarge">
@@ -80,5 +80,23 @@
               </div>
             </div>
         </div>
-	</div>
+	</div><!-- Closes span12 -->
+</div><!-- Closes row -->
+</div><!-- Closes container -->
+
+<div class="container">
+  <div class="well">    
+    <fieldset> <legend> Log In </legend>
+      <form class="form-horizontal" action="./db_login.php" method="POST">
+       <div class="control-group">
+         <label class="control-label"  for="username">Email</label>
+            <div class="controls">
+              <input required  type="email" id="email" name="email" placeholder="" class="input-xlarge">
+              <br><br>
+              <button class="btn btn-success">Login</button>
+           </div>
+        </div>
+     </form>
+   </fieldset>
+ </div>
 </div>
