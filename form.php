@@ -15,7 +15,7 @@
                       <form class="form-horizontal" action="./db_insert.php" method="POST">
                         <fieldset>
                           <div id="legend">
-                            <legend class="">Sign up Form</legend>
+                            <legend class="">Please fill out all information</legend>
                           </div>    
                           <div class="control-group">
                             <!-- Username -->
