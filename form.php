@@ -21,7 +21,7 @@
                             <!-- Username -->
                             <label class="control-label"  for="username">First Name</label>
                             <div class="controls">
-                              <input type="text" id="firstname" name="firstName" placeholder="" class="input-xlarge">
+                              <input required type="text" id="firstname" name="firstName" placeholder="" class="input-xlarge">
                             </div>
                           </div>
      
@@ -29,7 +29,7 @@
                             <!-- Password-->
                             <label class="control-label" for="lastname">Last Name</label>
                             <div class="controls">
-                              <input type="text" id="lastname" name="lastName" placeholder="" class="input-xlarge">
+                              <input required  type="text" id="lastname" name="lastName" placeholder="" class="input-xlarge">
                             </div>
                           </div>
 
@@ -37,7 +37,7 @@
                             <!-- Username -->
                             <label class="control-label"  for="username">Email</label>
                             <div class="controls">
-                              <input type="email" id="email" name="email" placeholder="" class="input-xlarge">
+                              <input required  type="email" id="email" name="email" placeholder="" class="input-xlarge">
                             </div>
                           </div>
 
@@ -45,7 +45,7 @@
                             <!-- Username -->
                             <label class="control-label"  for="username">Phone Number</label>
                             <div class="controls">
-                              <input type="text" id="phoneNumber" name="phoneNumber" placeholder="" class="input-xlarge">
+                              <input required  type="text" id="phoneNumber" name="phoneNumber" placeholder="" class="input-xlarge">
                             </div>
                           </div>
 
@@ -53,7 +53,7 @@
                             <!-- Username -->
                             <label class="control-label"  for="username">Birthday</label>
                             <div class="controls">
-                              <input type="date" id="birthday" name="birthday" placeholder="" class="input-xlarge">
+                              <input required  style="width:175px;" type="date" id="birthday" name="birthday" placeholder="" class="input-xlarge">
                             </div>
                           </div>
 
@@ -61,7 +61,7 @@
                             <!-- Username -->
                             <label class="control-label"  for="username">Gender</label>
                             <div class="controls">
-                              <input type="text" id="gender" name="gender" placeholder="" class="input-xlarge">
+                              <input required  type="text" id="gender" name="gender" placeholder="" class="input-xlarge">
                             </div>
                           </div>
      
