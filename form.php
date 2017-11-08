@@ -21,7 +21,7 @@
                             <!-- Username -->
                             <label class="control-label"  for="username">First Name</label>
                             <div class="controls">
-                              <input type="text" id="firstname" name="firstname" placeholder="" class="input-xlarge">
+                              <input type="text" id="firstname" name="firstName" placeholder="" class="input-xlarge">
                             </div>
                           </div>
      
@@ -29,7 +29,7 @@
                             <!-- Password-->
                             <label class="control-label" for="lastname">Last Name</label>
                             <div class="controls">
-                              <input type="text" id="lastname" name="lastname" placeholder="" class="input-xlarge">
+                              <input type="text" id="lastname" name="lastName" placeholder="" class="input-xlarge">
                             </div>
                           </div>
 
