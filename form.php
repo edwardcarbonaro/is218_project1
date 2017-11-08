@@ -53,7 +53,7 @@
                             <!-- Username -->
                             <label class="control-label"  for="username">Birthday</label>
                             <div class="controls">
-                              <input type="text" id="birthday" name="birthday" placeholder="" class="input-xlarge">
+                              <input type="date" id="birthday" name="birthday" placeholder="" class="input-xlarge">
                             </div>
                           </div>
 
