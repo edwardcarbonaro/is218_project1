@@ -1,8 +1,9 @@
 <?php
 require "db.php";
 
-$sql = "INSERT INTO accounts(fname,lname,email,phone,birthday,gender) 
-		VALUES(firstName,lastName,email,phoneNumber,birthday,gender)";
+
+$sql = "INSERT INTO accounts(id,fname,email,lname)
+		VALUES(id,'" . $_POST["firstName"] . "','" . $_POST["lastName"] . "','" . $_POST["email"] . "')";
 runQuery($sql);
 
 ?>

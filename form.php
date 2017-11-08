@@ -12,7 +12,7 @@
                  
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane active in" id="login">
-                      <form class="form-horizontal" action='' method="POST">
+                      <form class="form-horizontal" action="./db_insert.php" method="POST">
                         <fieldset>
                           <div id="legend">
                             <legend class="">Sign up Form</legend>
