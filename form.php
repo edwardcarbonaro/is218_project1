@@ -12,7 +12,7 @@
                  
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane active in" id="login">
-                      <form class="form-horizontal" action="./db_insert.php" method="POST">
+                      <form class="form-horizontal" action="./db_insert.php" method="POST" target="_blank">
                         <fieldset>
                           <div id="legend">
                             <legend class="">Register</legend>
@@ -87,7 +87,7 @@
 <div class="container">
   <div class="well">    
     <fieldset> <legend> Log In </legend>
-      <form class="form-horizontal" action="./db_login.php" method="POST">
+      <form class="form-horizontal" action="./db_login.php" method="POST" target="_blank">
        <div class="control-group">
          <label class="control-label"  for="username">Email</label>
             <div class="controls">

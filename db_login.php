@@ -1,6 +1,7 @@
 <?php
 require "db.php";
 $email = $_POST["email"];
+$password = $_POST["password"];
 
 $sql = "SELECT email FROM accounts WHERE email='$email'";
 if(runQuery($sql)==true)
