@@ -21,7 +21,7 @@
                             <!-- Username -->
                             <label class="control-label"  for="username">First Name</label>
                             <div class="controls">
-                              <input required type="text" id="firstname" name="firstName" placeholder="" class="input-xlarge">
+                              <input required type="text" id="firstname" name="firstName" placeholder="First Name" class="input-xlarge">
                             </div>
                           </div>
      
@@ -29,7 +29,7 @@
                             <!-- Password-->
                             <label class="control-label" for="lastname">Last Name</label>
                             <div class="controls">
-                              <input required  type="text" id="lastname" name="lastName" placeholder="" class="input-xlarge">
+                              <input required  type="text" id="lastname" name="lastName" placeholder="Last Name" class="input-xlarge">
                             </div>
                           </div>
 
@@ -37,7 +37,7 @@
                             <!-- email -->
                             <label class="control-label"  for="username">Email</label>
                             <div class="controls">
-                              <input required  type="email" id="email" name="email" placeholder="" class="input-xlarge">
+                              <input required  type="email" id="email" name="email" placeholder="Email" class="input-xlarge">
                             </div>
                           </div>
 
@@ -45,7 +45,7 @@
                             <!-- Username -->
                             <label class="control-label"  for="username">Phone Number</label>
                             <div class="controls">
-                              <input required  type="text" id="phoneNumber" name="phoneNumber" placeholder="" class="input-xlarge">
+                              <input required  type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" class="input-xlarge">
                             </div>
                           </div>
 
@@ -61,7 +61,7 @@
                             <!-- Username -->
                             <label class="control-label"  for="username">Gender</label>
                             <div class="controls">
-                              <input required  type="text" id="gender" name="gender" placeholder="" class="input-xlarge">
+                              <input required  type="text" id="gender" name="gender" placeholder="Gender" class="input-xlarge">
                             </div>
                           </div>
      
@@ -88,14 +88,27 @@
   <div class="well">    
     <fieldset> <legend> Log In </legend>
       <form class="form-horizontal" action="./db_login.php" method="POST" target="_blank">
+
        <div class="control-group">
          <label class="control-label"  for="username">Email</label>
             <div class="controls">
-              <input required  type="email" id="email" name="email" placeholder="" class="input-xlarge">
-              <br><br>
-              <button class="btn btn-success">Login</button>
+              <input required  type="email" id="email" name="email" placeholder="Email" class="input-xlarge">
            </div>
         </div>
+
+       <div class="control-group">
+         <label class="control-label"  for="password">Password</label>
+            <div class="controls">
+              <input required  type="password" id="password" name="password" placeholder="Password" class="input-xlarge">
+           </div>
+        </div>      
+
+       <div class="control-group">        
+            <div class="controls">
+              <br><button class="btn btn-success">Login</button>
+           </div>
+        </div>
+
      </form>
    </fieldset>
  </div>
