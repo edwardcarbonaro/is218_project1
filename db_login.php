@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "db.php";
 $email = $_POST["email"];
 $password = $_POST["password"];
@@ -15,12 +16,19 @@ if(runQuery($sql)==true){
 	
 	if($password == $pw){
 		$sql = "SELECT fname,lname FROM accounts WHERE email='$email'";
-		$results = runQuery($sql);		
+		$results = runQuery($sql);
+
 		foreach($results as $row){
 			echo $row["fname"] . " " . $row["lname"];
+			//Testing session variables
+			$_SESSION["userFirstName"] = $row["fname"];
+			$_SESSION["userLastName"] = $row["lname"];
+			
 			
 		}			
 	}
+	//testing log in to stay on form.php
+	//header("Location: form.php");
 	else{
 		echo "Email was found but password does not match";
 	}
@@ -32,5 +40,17 @@ else{
 }
 
 
-
+header("Location: form.php");
 ?>
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<a href="https://web.njit.edu/~ejc23/download/is218/project1/is218_project1/form.php">Go Back to Home Page</a>
+</body>
+</html>
+-->

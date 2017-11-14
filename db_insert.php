@@ -1,4 +1,5 @@
 <?php
+session_start();
 require "db.php";
 
 $email = $_POST["email"];
@@ -7,9 +8,9 @@ if(runQuery($sql)==true){
 	echo "That email already exists, please try again";
 }
 else{
-	$sql = "INSERT INTO accounts(id,fname,lname,email,phone,birthday,gender)
+	$sql = "INSERT INTO accounts(id,fname,lname,email,phone,birthday,gender,password)
 		VALUES(id,'" . $_POST["firstName"] . "','" . $_POST["lastName"] . "','" . $_POST["email"] . "',
-				'" . $_POST["phoneNumber"] . "','" . $_POST["birthday"] . "','" . $_POST["gender"] . "')";
+				'" . $_POST["phoneNumber"] . "','" . $_POST["birthday"] . "','" . $_POST["gender"] . "','" . $_POST["password"] . "')";
 	runQuery($sql);
 	echo $_POST["firstName"] . " " . $_POST["lastName"] . " has been registered";
 }
@@ -17,3 +18,12 @@ else{
 
 
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<a href="https://web.njit.edu/~ejc23/download/is218/project1/is218_project1/form.php">Go Back to Home Page</a>
+</body>
+</html>

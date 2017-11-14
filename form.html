@@ -1,12 +1,11 @@
 <?php
 // Start the session
 session_start();
-if(isset($_SESSION['userFirstName'])){
-  echo " You are Logged In As " . $_SESSION['userFirstName'] . " " . $_SESSION['userLastName'];
-}
+require "db_login.php";
+require "db_insert.php";
+echo " You are Logged In As " . $_SESSION['userFirstName'] . " " . $_SESSION['userLastName'];
 
-echo "<br>";
-echo " <a href='logout.php'>Logout</a> ";
+
 ?>
 
 
