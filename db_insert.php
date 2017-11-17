@@ -13,11 +13,14 @@ else{
 				'" . $_POST["phoneNumber"] . "','" . $_POST["birthday"] . "','" . $_POST["gender"] . "','" . $_POST["password"] . "')";
 	runQuery($sql);
 	echo $_POST["firstName"] . " " . $_POST["lastName"] . " has been registered";
+	$_SESSION["email"] = $_POST["email"];
 }
 
+//header("Location: form.php");
 
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>

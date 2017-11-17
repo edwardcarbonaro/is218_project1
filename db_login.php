@@ -2,6 +2,7 @@
 session_start();
 require "db.php";
 $email = $_POST["email"];
+$_SESSION["email"] = $email;
 $password = $_POST["password"];
 
 $sql = "SELECT email FROM accounts WHERE email='$email'";
