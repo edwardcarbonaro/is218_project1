@@ -7,9 +7,10 @@ $firstName = $_SESSION['userFirstName'];
 $lastName = $_SESSION['userLastName'];
 
 //Header
+echo "<header>";
 echo "<a href='./form.php'> <button class=\"btn btn-secondary\"> Return Home </button></a>";
 echo "<a href='https://www.w3schools.com/howto/howto_js_todolist.asp'> <button class=\"btn btn-secondary\"> JavaScript To-Do List </button></a>";
-
+echo "</header>";
 //Displays uncompleted to do list items
 echo "<div class='container'>";
 echo "<h2>To-Do List For:  " . $firstName . " " . $lastName . "</h1>";
@@ -45,17 +46,7 @@ echo "</div>";
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<style>
-  	html{
-  		margin: 10px 100px 100px 100px;
-  	}
-  	.container{
-  		background-color:#efefef;
-  		padding: 10px 10px 10px 10px;
-  		border:1px solid black;
-  		border-radius:10px;
-  	}
-  	</style>
+  	<link href="./main.css" rel="stylesheet">
   	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
@@ -79,7 +70,10 @@ echo "</div>";
     				<button type="submit" id="addTaskButton" class="btn btn-primary">Add Task</button>       		
   				</div>  		
 			</form>	
-	</div>	
+	</div>
+  <footer>
+    <span> &copy; 2017 </span>
+  </footer>	
   </body>
 </html>
 
