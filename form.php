@@ -2,14 +2,13 @@
 // Start the session
 session_start();
 if(isset($_SESSION['userFirstName'])){
-  echo " You are Logged In As " . $_SESSION['userFirstName'] . " " . $_SESSION['userLastName'];
+  echo " <h1> You are Logged In As:  " . $_SESSION['userFirstName'] . " " . $_SESSION['userLastName'] . "</h1>";
   echo "<br>";
 }
 
 if(isset($_SESSION['userFirstName'])){
-  echo "<a href='logout.php'>Logout</a>";
-  echo "<br>";
-  echo "<a href='userToDoList.php'>To Do List</a>";
+  echo "<a href='logout.php'><button class=\"btn btn-secondary\"> Logout </button> </a>";
+  echo "<a href='userToDoList.php'><button class=\"btn btn-secondary\">To Do List </button> </a>";
 }
 
 ?> 
@@ -20,7 +19,9 @@ if(isset($_SESSION['userFirstName'])){
   
 <html>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 </head>
 <body>
 
