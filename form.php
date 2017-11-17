@@ -42,7 +42,7 @@ if(isset($_SESSION['userFirstName'])){
                  
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane active in" id="login">
-                      <form class="form-horizontal" action="./db_insert.php" method="POST" target="_blank">
+                      <form class="form-horizontal" action="./db_insert.php" method="POST" target="_self">
                         <fieldset>
                           <div id="legend">
                             <legend class="">Register</legend>
@@ -111,7 +111,7 @@ if(isset($_SESSION['userFirstName'])){
                           <div class="control-group">
                             <!-- Button -->
                             <div class="controls">
-                              <br><button class="btn btn-success">Sign up</button>
+                              <br><button type="submit" class="btn btn-success">Sign up</button>
                             </div>
                           </div>
                         </fieldset>
@@ -147,7 +147,7 @@ if(isset($_SESSION['userFirstName'])){
 
        <div class="control-group">        
             <div class="controls">
-              <br><button class="btn btn-success">Login</button>
+              <br><button type="submit" class="btn btn-success">Login</button>
            </div>
         </div>
 

@@ -16,7 +16,7 @@ else{
 	$_SESSION["email"] = $_POST["email"];
 }
 
-//header("Location: form.php");
+header("Location: form.php");
 
 
 ?>

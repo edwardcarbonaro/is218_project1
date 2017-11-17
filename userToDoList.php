@@ -7,28 +7,28 @@ $firstName = $_SESSION['userFirstName'];
 $lastName = $_SESSION['userLastName'];
 
 //Displays uncompleted to do list items
-echo "Welcome to Your To-Do List:  " . $firstName . " " . $lastName;
+echo "<a href='./form.php'> <button class=\"btn btn-secondary\"> Return Home </button></a>";
+echo "<hr>";
+echo "<h2>To-Do List For:  " . $firstName . " " . $lastName . "</h1>";
 $sql = "SELECT * FROM todos WHERE owneremail='$email' AND isdone='0'";
 $results = runQuery($sql);
 echo "<ul>";
 foreach($results as $row){
-	echo "<li class='list-group-item'>" . $row['message'] ." |  Due Date: ".  $row['duedate']  . "</li>";			
+	echo "<li>" . $row['message'] ." |  Due Date: ".  $row['duedate']  . "</li>";			
 }
 echo "</ul>";
 //End of Displays Uncompleted
 
 //Displays completed to do list items
-echo "These are your completed to-do items";
+echo "<h4>These are your completed to-do items</h4>";
 $sql = "SELECT * FROM todos WHERE owneremail='$email' AND isdone='1'";
 $results = runQuery($sql);
 echo "<ul>";
 foreach($results as $row){
-	echo "<li class='list-group-item'>" . $row['message'] ."|  Due Date: ".  $row['duedate'] . "</li>";			
+	echo "<li>" . $row['message'] ."|  Due Date: ".  $row['duedate'] . "</li>";			
 }
 echo "</ul>";
 //End of Display Completed Items
-
-
 ?>
 
 
@@ -39,6 +39,15 @@ echo "</ul>";
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  	<style>
+  	html{
+  		margin: 10px 100px 100px 100px;
+  	}
+  	</style>
+  	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+  	<script src='./main.js'> </script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -47,20 +56,17 @@ echo "</ul>";
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Hello, world!</h1>
-
-    <form>
+    <h2>Add To-Do List Items</h2>
+    <form action="./todo_insert.php" method="POST" target="_self">
   		<div class="form-group">
-   			<label for="formGroupExampleInput">Add a To-Do List Item</label>
-    		<input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">    		
-  		</div>
-  		
-	</form>
+  			<label for="message"> Task </label>   			
+    		<input type="text" name="message" class="form-control" id="message" placeholder="Example input">
+    		<label for="dueDate"> Due Date </label>   			
+    		<input type="date" name="dueDate" class="form-control" id="dueDate">
 
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    		<button type="submit" id="addTaskButton" class="btn btn-primary">Add Task</button>       		
+  		</div>  		
+	</form>		
   </body>
 </html>
 
