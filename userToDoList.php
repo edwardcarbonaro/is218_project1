@@ -8,6 +8,7 @@ $lastName = $_SESSION['userLastName'];
 
 //Header
 echo "<a href='./form.php'> <button class=\"btn btn-secondary\"> Return Home </button></a>";
+echo "<a href='https://www.w3schools.com/howto/howto_js_todolist.asp'> <button class=\"btn btn-secondary\"> JavaScript To-Do List </button></a>";
 
 //Displays uncompleted to do list items
 echo "<div class='container'>";
@@ -21,11 +22,9 @@ foreach($results as $row){
 	echo "<li class=\"list-group-item list-group-item-danger\">" . $row['message'] ." |  Due Date: ".  $row['duedate']  . "</li>";			
 }
 echo "</ul>";
-
 //End of Displays Uncompleted
 
 //Displays completed to do list items
-
 echo "<h4>Completed</h4>";
 $sql = "SELECT * FROM todos WHERE owneremail='$email' AND isdone='1'";
 $results = runQuery($sql);
@@ -74,9 +73,9 @@ echo "</div>";
     		<form action="./todo_insert.php" method="POST" target="_self">
   				<div class="form-group">
   					<label for="message"> Task </label>   			
-    				<input type="text" name="message" class="form-control" id="message" placeholder="Example input">
+    				<input required type="text" name="message" class="form-control" id="message" placeholder="Example input">
     				<label for="dueDate"> Due Date </label>   			
-    				<input type="date" name="dueDate" class="form-control" id="dueDate">
+    				<input required type="date" name="dueDate" class="form-control" id="dueDate">
     				<button type="submit" id="addTaskButton" class="btn btn-primary">Add Task</button>       		
   				</div>  		
 			</form>	
