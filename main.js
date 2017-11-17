@@ -1,7 +1,11 @@
-$('#addTaskButton').click(function() {
-	$('#addTaskMessage').toggle()
-});
-
-$( "#addTaskButton" ).click(function() {
-  alert( "Handler for .click() called." );
+$( document ).ready(function() {
+	$( "#register_form" ).submit(function( event ) {
+  		alert( "Registration Completed" );  
+	});
+	$( "#todo_form" ).submit(function( event ) {
+  		alert( "Task Added" );  
+	});
+	$( "#login_form" ).submit(function( event ) {
+  		alert( "Task Added" );  
+	});	
 });

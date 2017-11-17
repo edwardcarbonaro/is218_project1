@@ -70,7 +70,7 @@ echo "</div>";
   <body>
   	<div class='container'>
     	<h2>Add To-Do List Items</h2>
-    		<form action="./todo_insert.php" method="POST" target="_self">
+    		<form id="todo_form" action="./todo_insert.php" method="POST" target="_self">
   				<div class="form-group">
   					<label for="message"> Task </label>   			
     				<input required type="text" name="message" class="form-control" id="message" placeholder="Example input">

@@ -19,16 +19,12 @@ if(isset($_SESSION['userFirstName'])){
   
 <html>
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">   
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="./main.js"></script>
 </head>
 <body>
-
-<!-- <div class="header">
-<h1> Header </h1>
-
-</div> -->
 
 <div class="container">
  	<div class="row">
@@ -43,7 +39,7 @@ if(isset($_SESSION['userFirstName'])){
                  
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane active in" id="login">
-                      <form class="form-horizontal" action="./db_insert.php" method="POST" target="_self">
+                      <form id="register_form" class="form-horizontal" action="./db_insert.php" method="POST" target="_self">
                         <fieldset>
                           <div id="legend">
                             <legend class="">Register</legend>
@@ -130,7 +126,7 @@ if(isset($_SESSION['userFirstName'])){
 <div class="container">
   <div class="well">    
     <fieldset> <legend> Log In </legend>
-      <form class="form-horizontal" action="./db_login.php" method="POST" target="_self">
+      <form id="login_form" class="form-horizontal" action="./db_login.php" method="POST" target="_self">
 
        <div class="control-group">
          <label class="control-label"  for="username">Email</label>
