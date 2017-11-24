@@ -8,9 +8,9 @@ $lastName = $_SESSION['userLastName'];
 
 //Header
 echo "<header>";
-echo "<a href='./form.php'> <button class=\"btn btn-secondary\"> Return Home </button></a>";
-echo "<a href='https://www.w3schools.com/howto/howto_js_todolist.asp'> <button class=\"btn btn-secondary\"> JavaScript To-Do List </button></a>";
+echo "<br><a class='header' href='./form.php'> <button class=\"btn btn-secondary\"> Return Home </button></a>";
 echo "</header>";
+
 //Displays uncompleted to do list items
 echo "<div class='container'>";
 echo "<h2>To-Do List For:  " . $firstName . " " . $lastName . "</h1>";
@@ -20,7 +20,8 @@ $sql = "SELECT * FROM todos WHERE owneremail='$email' AND isdone='0'";
 $results = runQuery($sql);
 echo "<ul>";
 foreach($results as $row){
-	echo "<li class=\"list-group-item list-group-item-danger\">" . $row['message'] ." |  Due Date: ".  $row['duedate']  . "</li>";			
+	echo "<li class=\"list-group-item list-group-item-danger\">" . $row['message'] ." |  Due Date: ".  $row['duedate'] . 
+       "<a href=\"remove_button_action.php?id=".$row['id']."\">Delete</a>". "</li>";			
 }
 echo "</ul>";
 //End of Displays Uncompleted
@@ -35,6 +36,8 @@ foreach($results as $row){
 }
 echo "</ul>";
 echo "</div>";
+
+
 //End of Display Completed Items
 ?>
 
