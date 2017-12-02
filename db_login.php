@@ -24,6 +24,8 @@ if(runQuery($sql)==true){
 			//Testing session variables
 			$_SESSION["userFirstName"] = $row["fname"];
 			$_SESSION["userLastName"] = $row["lname"];
+
+			header("Location: userToDoList.php");
 			
 			
 		}			
@@ -31,27 +33,12 @@ if(runQuery($sql)==true){
 	//testing log in to stay on form.php
 	//header("Location: form.php");
 	else{
-		echo "Email was found but password does not match";
+		header("Location: error.php");		
 	}
 
 			
 }	
 else{
-	echo "That email does not exist in the database";
+		header("Location: error.php");
 }
-
-
-header("Location: userToDoList.php");
 ?>
-
-<!--
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-<a href="https://web.njit.edu/~ejc23/download/is218/project1/is218_project1/form.php">Go Back to Home Page</a>
-</body>
-</html>
--->

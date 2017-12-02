@@ -8,13 +8,14 @@ $lastName = $_SESSION['userLastName'];
 
 //Header
 echo "<header>";
+echo "<h2>To-Do List For:  " . $firstName . " " . $lastName . "</h1>";
 echo "<br><a class='header' href='./form.php'> <button class=\"btn btn-secondary\"> Return Home </button></a>";
 echo "<a class='header'  href='./logout.php'><button class=\"btn btn-secondary\"> Logout </button> </a>";
+
 echo "</header>";
 
 //Displays uncompleted to do list items
 echo "<div class='container'>";
-echo "<h2>To-Do List For:  " . $firstName . " " . $lastName . "</h1>";
 echo "<hr>";
 echo "<h4>Uncompleted</h4>";
 $sql = "SELECT * FROM todos WHERE owneremail='$email' AND isdone='0'";
