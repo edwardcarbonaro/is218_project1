@@ -17,9 +17,10 @@ footer{
   		padding: 10px 10px 10px 10px;  	
 }
 
- a{
- 	right:10px;
- 	position:absolute;
+li a{
+ 	margin-left:10px;
+ 	
+
  }	
  a.header{
  	align:center;

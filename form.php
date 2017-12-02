@@ -124,7 +124,6 @@ echo "</header>";
 	</div><!-- Closes span12 -->
 </div><!-- Closes row -->
 </div><!-- Closes container -->
-
 <div class="container">
   <div class="well">    
     <fieldset> <legend> Log In </legend>
@@ -154,6 +153,7 @@ echo "</header>";
    </fieldset>
  </div>
 </div>
+
   <footer>
     <span> &copy; 2017 </span>
   </footer> 

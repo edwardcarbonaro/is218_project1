@@ -6,6 +6,7 @@ $( document ).ready(function() {
   		alert( "Task Added" );  
 	});
 	$( "#login_form" ).submit(function( event ) {
-  		alert( "Log in Successful" );  
+  		alert( "Attempting to Login" );  
 	});	
 });
+
