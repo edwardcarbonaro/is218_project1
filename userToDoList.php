@@ -24,6 +24,13 @@ foreach($results as $row){
 	echo "<li class=\"list-group-item list-group-item-danger\">" . $row['message'] ." |  Due Date: ".  $row['duedate'] . 
        "<a href=\"remove_button_action.php?id=".$row['id']."\">Delete</a>". "<a href=\"move_to_completed_action.php?id=".$row['id']."\">Move to Completed</a>".
        "</li>";	
+//Form input for editing to-do item
+echo "<form action=\"edit_form.php?id=".$row['id']."\" method='POST' target='_self'>";
+echo "<input type='text' name='editTask'>";
+echo "<input type='submit' value='Edit Task'>";
+echo "</form>";
+
+
 
 }
 echo "</ul>";
