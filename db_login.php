@@ -33,7 +33,7 @@ if(runQuery($sql)==true){
 	//testing log in to stay on form.php
 	//header("Location: form.php");
 	else{
-		header("Location: error.php");		
+		header("Location: error_email.php");		
 	}
 
 			

@@ -27,8 +27,8 @@ foreach($results as $row){
        "</li>";	
 //Form input for editing to-do item
 echo "<form action=\"edit_form.php?id=".$row['id']."\" method='POST' target='_self'>";
-echo "<input type='text' name='editTask'>";
-echo "<input type='submit' value='Edit Task'>";
+echo "<input id='editInput' type='text' name='editTask'>";
+echo "<input id='editSubmit' type='submit' value='Edit Task'>";
 echo "</form>";
 
 

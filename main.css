@@ -19,6 +19,7 @@ footer{
 
 li a{
  	margin-left:10px;
+ 	margin-right:10px;
  	
 
  }	
@@ -26,3 +27,11 @@ li a{
  	align:center;
  	position:relative;
  }
+
+#editInput{
+	width:90%;
+}
+
+#editSubmit{
+	width:10%;
+}
