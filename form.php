@@ -124,6 +124,16 @@ echo "</header>";
 	</div><!-- Closes span12 -->
 </div><!-- Closes row -->
 </div><!-- Closes container -->
+
+
+
+
+<?php
+if (!isset($_SESSION['userFirstName']))
+{
+?>
+
+
 <div class="container">
   <div class="well">    
     <fieldset> <legend> Log In </legend>
@@ -153,6 +163,10 @@ echo "</header>";
    </fieldset>
  </div>
 </div>
+
+<?php
+}
+?>
 
   <footer>
     <span> &copy; 2017 </span>
