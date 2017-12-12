@@ -9,10 +9,12 @@ $lastName = $_SESSION['userLastName'];
 //Header
 echo "<header>";
 echo "<h2>To-Do List For:  " . $firstName . " " . $lastName . "</h1>";
-echo "<br><a class='header' href='./form.php'> <button class=\"btn btn-secondary\"> Return Home </button></a>";
+//Button to return to form.php
+// echo "<br><a class='header' href='./form.php'> <button class=\"btn btn-secondary\"> Return Home </button></a>";
 echo "<a class='header'  href='./logout.php'><button class=\"btn btn-secondary\"> Logout </button> </a>";
 
 echo "</header>";
+
 
 //Displays uncompleted to do list items
 echo "<div class='container'>";
@@ -48,12 +50,9 @@ foreach($results as $row){
 }
 echo "</ul>";
 echo "</div>";
-
-
 //End of Display Completed Items
+
 ?>
-
-
 
 
 
@@ -74,6 +73,7 @@ echo "</div>";
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   </head>
   <body>
+    <?php if (isset($_SESSION['userFirstName']))  { ?>
   	<div class='container'>
     	<h2>Add To-Do List Items</h2>
     		<form id="todo_form" action="./todo_insert.php" method="POST" target="_self">
@@ -86,11 +86,13 @@ echo "</div>";
   				</div>  		
 			</form>	
 	</div>
+  <?php } ?>
   <footer>
     <span> &copy; 2017 </span>
   </footer>	
   </body>
 </html>
+
 
 
 
